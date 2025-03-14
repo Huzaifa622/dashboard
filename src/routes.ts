@@ -8,6 +8,7 @@ import Tasks from "./Pages/tasks/tasks"
 
 
 export const routes = [
+    {path: '/', component: Dashboard},
     {path: '/dashboard', component: Dashboard},
     {path: '/firm-dashboard', component: Dashboard},
     {path: '/firm-feed', component: Dashboard},
