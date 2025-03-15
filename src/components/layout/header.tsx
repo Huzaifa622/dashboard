@@ -1,6 +1,7 @@
 import { Input } from "../ui/input";
 import { Search } from "lucide-react";
 import Timer from "../ui/timer";
+import { AvatarDropdown } from "../ui/avatar-dropdown";
 
 function Header() {
   return (
@@ -17,7 +18,7 @@ function Header() {
           />
         </div>
         </div>
-        <div><Timer/></div>
+        <div className="flex gap-4 items-center" ><Timer/><AvatarDropdown/></div>
       </div>
     </div>
   );
