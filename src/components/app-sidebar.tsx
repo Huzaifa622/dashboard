@@ -93,8 +93,8 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
             <SidebarMenu>
               {items.map((item) => (
                 <SidebarMenuItem key={item.title}>
-                  <SidebarMenuButton asChild>
-                    <Link to={item.url}>
+                  <SidebarMenuButton tooltip={item.title} asChild>
+                    <Link to={item.url.toLocaleLowerCase()}>
                       <item.icon />
                       <span>{item.title}</span>
                     </Link>
