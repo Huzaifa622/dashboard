@@ -4,8 +4,8 @@ import Timer from "../ui/timer";
 
 function Header() {
   return (
-    <div className="bg-[#09090B] fixed top-0 w-full border-b border-b-[#27272A] border-dashed">
-      <div className=" flex justify-between items-center px-8 py-2 text-white">
+    <div className=" fixed top-0 w-full border-b border-b-[#27272A] border-dashed">
+      <div className=" flex justify-between items-center px-8 py-1 text-white">
         <div className="flex gap-4 items-center w-full" >
           <div className="text-2xl font-bold" >Logo</div>
         <div className="md:w-[30%] relative">

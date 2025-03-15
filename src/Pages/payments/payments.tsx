@@ -1,6 +1,7 @@
-import Breadcrumb from "@/components/ui/breadcrumb"
+// import Breadcrumb from "@/components/ui/breadcrumb"
 import { DataTable } from "./_components/data-table"
 import { columns, Payment } from "./_components/columns"
+import BreadCrumbPage from "@/components/ui/breadcrumb-app"
 
 const data: Payment[] = [
     {
@@ -37,7 +38,7 @@ const data: Payment[] = [
 function Payments() {
   return (
     <div>
-    <Breadcrumb title="Payments" />
+     <BreadCrumbPage title="Payments" />
     <DataTable columns={columns} data={ data} />
    </div>
   )

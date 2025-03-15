@@ -48,7 +48,7 @@ const items = [
 
 export function AppSidebar() {
   return (
-    <Sidebar className="border-r border-r-[#27272A] border-dashed" >
+    <Sidebar collapsible="icon" className="border-r border-r-[#27272A] border-dashed" >
       <SidebarContent className="bg-[#09090B] text-white"  >
         <SidebarGroup>
           {/* <SidebarGroupLabel className="text-white" >Application</SidebarGroupLabel> */}

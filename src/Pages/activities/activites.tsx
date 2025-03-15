@@ -1,9 +1,11 @@
-import Breadcrumb from "@/components/ui/breadcrumb";
+// import Breadcrumb from "@/components/ui/breadcrumb";
+
+import BreadCrumbPage from "@/components/ui/breadcrumb-app";
 
 function Activites() {
   return (
     <div>
-      <Breadcrumb title="Activities" />
+      <BreadCrumbPage title="Activities" />
     </div>
   );
 }

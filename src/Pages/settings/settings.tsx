@@ -1,9 +1,12 @@
-import Breadcrumb from "@/components/ui/breadcrumb"
+// import Breadcrumb from "@/components/ui/breadcrumb"
+
+import BreadCrumbPage from "@/components/ui/breadcrumb-app"
 
 function Settings() {
   return (
     <div>
-    <Breadcrumb title="Settings" />
+         <BreadCrumbPage title="Settings" />
+    {/* <Breadcrumb title="Settings" /> */}
    </div>
   )
 }

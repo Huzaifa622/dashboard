@@ -1,4 +1,5 @@
-import Breadcrumb from "@/components/ui/breadcrumb"
+// import Breadcrumb from "@/components/ui/breadcrumb"
+import BreadCrumbPage from "@/components/ui/breadcrumb-app"
 import { PieCh } from "./_componenets/pie-chart"
 // import { PieCh } from "./_components/pie-chart"
 
@@ -6,7 +7,7 @@ import { PieCh } from "./_componenets/pie-chart"
 function Analytics() {
   return (
     <div>
-    <Breadcrumb title="Analytics" />
+    <BreadCrumbPage title="Analytics" />
     <div><PieCh/></div>
    </div>
   )
