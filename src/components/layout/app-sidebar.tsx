@@ -48,15 +48,15 @@ const items = [
 
 export function AppSidebar() {
   return (
-    <Sidebar collapsible="icon" className="border-r border-r-[#27272A] border-dashed" >
-      <SidebarContent className="bg-[#09090B] text-white"  >
+    <Sidebar collapsible="icon" className="border-r border-r-[#000] border-dashed" >
+      <SidebarContent className="bg-sidebar text-sidebar-foreground"  >
         <SidebarGroup>
           {/* <SidebarGroupLabel className="text-white" >Application</SidebarGroupLabel> */}
           <SidebarGroupContent>
             <SidebarMenu>
               {items.map((item) => (
                 <SidebarMenuItem key={item.title}>
-                  <SidebarMenuButton asChild className="hover:bg-[#2d2d30] py-5 transition-all font-bold ease-linear hover:text-white">
+                  <SidebarMenuButton asChild className=" py-5 transition-all font-bold ease-linear ">
                     <Link to={item.url.toLocaleLowerCase()}>
                       <item.icon size={25} />
                       <span>{item.title}</span>

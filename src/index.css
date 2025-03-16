@@ -109,3 +109,14 @@ html {
   --sidebar-border: hsl(240 3.7% 15.9%);
   --sidebar-ring: hsl(217.2 91.2% 59.8%);
 }
+
+.light {
+  --sidebar: hsl(220 20% 97%); /* Light blueish-white background */
+  --sidebar-foreground: hsl(220 10% 20%); /* Darker text for contrast */
+  --sidebar-primary: hsl(210 90% 50%); /* Bright blue */
+  --sidebar-primary-foreground: hsl(0 0% 100%); /* White text for contrast */
+  --sidebar-accent: hsl(220 30% 90%); /* Light grayish-blue */
+  --sidebar-accent-foreground: hsl(220 10% 25%); /* Darker accent text */
+  --sidebar-border: hsl(220 20% 85%); /* Soft border */
+  --sidebar-ring: hsl(210 90% 60%); /* Vibrant blue for focus rings */
+}

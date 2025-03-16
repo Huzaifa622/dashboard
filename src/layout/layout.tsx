@@ -7,12 +7,12 @@ import { Outlet } from "react-router";
 
 export default function Layout() {
   return (
-    <div className="bg-[#18181B] text-white">
+    <div className="bg-sidebar text-foreground">
       <Header />
       <SidebarProvider className="">
         <AppSidebar />
         <SidebarTrigger />
-        <main className="grow mt-16 px-2">
+        <main className="grow mt-16 px-2 bg-sidebar text-foreground">
           <Outlet />
         </main>
       </SidebarProvider>

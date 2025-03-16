@@ -122,7 +122,7 @@ export function DataTable<TData, TValue>({
         <div className="flex gap-4 items-center " >
         <Dialog>
       <DialogTrigger asChild>
-        <Button variant="outline"><CirclePlus />Add Task</Button>
+        <Button variant="dark"><CirclePlus />Add Task</Button>
       </DialogTrigger>
       <DialogContent className="sm:max-w-[425px]">
         <DialogHeader>
@@ -152,7 +152,7 @@ export function DataTable<TData, TValue>({
     </Dialog>
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
-            <Button variant="outline" className="ml-auto">
+            <Button variant="dark" className="ml-auto">
               Columns <ChevronDown />
             </Button>
           </DropdownMenuTrigger>
@@ -178,7 +178,7 @@ export function DataTable<TData, TValue>({
         </DropdownMenu>
         </div>
       </div>
-      <div className="rounded-md border">
+      <div className="rounded-md border border-sidebar-border">
         <Table>
           <TableHeader>
             {table.getHeaderGroups().map((headerGroup) => (
