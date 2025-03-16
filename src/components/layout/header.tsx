@@ -1,6 +1,6 @@
 import { Input } from "../ui/input";
 import { Search } from "lucide-react";
-import Timer from "../ui/timer";
+// import Timer from "../ui/timer";
 import { AvatarDropdown } from "../ui/avatar-dropdown";
 import { ModeToggle } from "../mode-toggle";
 
