@@ -13,6 +13,7 @@ import {
   DropdownMenuSubTrigger,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
+import { Link } from "react-router"
 
 export function AvatarDropdown() {
   return (
@@ -65,10 +66,12 @@ export function AvatarDropdown() {
         <DropdownMenuItem>Support</DropdownMenuItem>
         <DropdownMenuItem disabled>API</DropdownMenuItem>
         <DropdownMenuSeparator />
+          <Link to={"/login"}>
         <DropdownMenuItem>
           Log out
           <DropdownMenuShortcut>⇧⌘Q</DropdownMenuShortcut>
-        </DropdownMenuItem>
+          </DropdownMenuItem>
+          </Link>
       </DropdownMenuContent>
     </DropdownMenu>
   )

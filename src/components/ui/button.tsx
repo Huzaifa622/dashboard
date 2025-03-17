@@ -31,7 +31,7 @@ const buttonVariants = cva(
       },
     },
     defaultVariants: {
-      variant: "default",
+      variant: "dark",
       size: "default",
     },
   }
@@ -52,7 +52,7 @@ function Button({
   return (
     <Comp
       data-slot="button"
-      className={cn(buttonVariants({ variant, size, className }))}
+      className={cn(buttonVariants({  size, className }))}
       {...props}
     />
   )

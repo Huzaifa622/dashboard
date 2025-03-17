@@ -1,36 +1,42 @@
 import { Button } from "@/components/ui/button";
 // import { Link } from "react-router";
-import {useForm} from "react-hook-form"
-import {zodResolver} from "@hookform/resolvers/zod"
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { LogIn } from "lucide-react";
 
 const loginSchema = z.object({
-    email: z.string().email(),
-    password: z.string().min(8 , {message: "Password must be atleast 8 characters "}).max(16)
-})
-type SchemaType = z.infer<typeof loginSchema>
+  email: z.string().email(),
+  password: z
+    .string()
+    .min(8, { message: "Password must be atleast 8 characters " })
+    .max(16),
+});
+type SchemaType = z.infer<typeof loginSchema>;
 
 function Login() {
-    const { handleSubmit , register,formState:{errors} } = useForm<SchemaType>({resolver:zodResolver(loginSchema)})
+  const {
+    handleSubmit,
+    register,
+    formState: { errors },
+  } = useForm<SchemaType>({ resolver: zodResolver(loginSchema) });
 
-    const onSubmit = async() =>{
-
-    }
+  const onSubmit = async () => {
+    window.location.href = "/dashboard";
+  };
   return (
-    <div className="bg-[#09090B]">
+    <div className="bg-sidebar">
       <div className="flex justify-center w-screen h-screen items-center">
         <div className="p-5 border w-[35%] rounded-2xl">
-      
           <div
             // style="animation: slideInFromLeft 1s ease-out;"
             className="w-full   rounded-xl shadow-2xl overflow-hidden p-8 space-y-8"
           >
             <h2
-            //   style="animation: appear 2s ease-out;"
-              className="text-center text-4xl font-extrabold text-white"
+              //   style="animation: appear 2s ease-out;"
+              className="text-center text-4xl font-extrabold text-sidebar-foreground"
             >
-             Login
+              Login
             </h2>
             {/* <p
             //   style="animation: appear 3s ease-out;"
@@ -42,36 +48,44 @@ function Login() {
               <div className="relative">
                 <input
                   placeholder="john@example.com"
-                  className="peer h-10 w-full border-b-2 border-gray-300 text-white bg-transparent placeholder-transparent focus:outline-none focus:border-white"
+                  className="peer h-10 w-full border-b-2 border-sidebar-border text-sidebar-foreground bg-transparent placeholder-transparent focus:outline-none focus:border-sidebar-accent"
                   {...register("email", { required: true })}
                   id="email"
                   name="email"
                   type="email"
                 />
                 <label
-                  className="absolute left-0 -top-3.5 text-gray-500 text-sm transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-2 peer-focus:-top-3.5 peer-focus:text-white peer-focus:text-sm"
+                  className="absolute left-0 -top-3.5 text-gray-500 text-sm transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-2 peer-focus:-top-3.5 peer-focus:text-sidebar-accent-foreground peer-focus:text-sm"
                   htmlFor="email"
                 >
                   Email address
                 </label>
-                {errors.email?.message && <p className="text-[#FF0000] mt-2 font-bold text-xs" >{errors.email?.message}</p>}
+                {errors.email?.message && (
+                  <p className="text-[#FF0000] mt-2 font-bold text-xs">
+                    {errors.email?.message}
+                  </p>
+                )}
               </div>
               <div className="relative">
                 <input
                   placeholder="Password"
-                  className="peer h-10 w-full border-b-2 border-gray-300 text-white bg-transparent placeholder-transparent focus:outline-none focus:border-white"
+                  className="peer h-10 w-full border-b-2 border-sidebar-border text-sidebar-foreground bg-transparent placeholder-transparent focus:outline-none focus:border-sidebar-accent"
                   {...register("password", { required: true })}
                   id="password"
                   name="password"
                   type="password"
                 />
                 <label
-                  className="absolute left-0 -top-3.5 text-gray-500 text-sm transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-2 peer-focus:-top-3.5 peer-focus:text-white peer-focus:text-sm"
+                  className="absolute left-0 -top-3.5 text-gray-500 text-sm transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-2 peer-focus:-top-3.5 peer-focus:text-sidebar-accent-foreground peer-focus:text-sm"
                   htmlFor="password"
                 >
                   Password
                 </label>
-                {errors.password?.message && <p  className="text-[#FF0000] mt-2 font-bold text-xs">{errors.password?.message}</p>}
+                {errors.password?.message && (
+                  <p className="text-[#FF0000] mt-2 font-bold text-xs">
+                    {errors.password?.message}
+                  </p>
+                )}
               </div>
               {/* <div className="flex items-center justify-between">
                 <label className="flex items-center text-sm text-gray-200">
@@ -85,11 +99,8 @@ function Login() {
                   Forgot your password?
                 </a>
               </div> */}
-              <Button
-                className="w-full py-2 px-4 "
-                type="submit"
-              >
-              <LogIn />  Sign In
+              <Button className="w-full py-2 px-4 " type="submit">
+                <LogIn /> Sign In
               </Button>
             </form>
             {/* <div className="text-center text-gray-300">
