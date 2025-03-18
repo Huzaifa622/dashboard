@@ -22,7 +22,7 @@ function Login() {
   } = useForm<SchemaType>({ resolver: zodResolver(loginSchema) });
 
   const onSubmit = async () => {
-    window.location.href = "/dashboard";
+    window.location.href = "/";
   };
   return (
     <div className="bg-sidebar">
