@@ -1,4 +1,4 @@
-import { Button } from "@/components/ui/button"
+
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -12,14 +12,18 @@ import {
   DropdownMenuSubContent,
   DropdownMenuSubTrigger,
   DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu"
-import { Link } from "react-router"
+} from "@/components/ui/dropdown-menu";
+import { Link } from "react-router";
+import { Avatar, AvatarFallback, AvatarImage } from "./avatar";
 
 export function AvatarDropdown() {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button variant="dark">Open</Button>
+        <Avatar>
+          <AvatarImage src="https://github.com/shadcn.png" />
+          <AvatarFallback>CN</AvatarFallback>
+        </Avatar>
       </DropdownMenuTrigger>
       <DropdownMenuContent className="w-56">
         <DropdownMenuLabel>My Account</DropdownMenuLabel>
@@ -66,13 +70,13 @@ export function AvatarDropdown() {
         <DropdownMenuItem>Support</DropdownMenuItem>
         <DropdownMenuItem disabled>API</DropdownMenuItem>
         <DropdownMenuSeparator />
-          <Link to={"/login"}>
-        <DropdownMenuItem>
-          Log out
-          <DropdownMenuShortcut>⇧⌘Q</DropdownMenuShortcut>
+        <Link to={"/login"}>
+          <DropdownMenuItem>
+            Log out
+            <DropdownMenuShortcut>⇧⌘Q</DropdownMenuShortcut>
           </DropdownMenuItem>
-          </Link>
+        </Link>
       </DropdownMenuContent>
     </DropdownMenu>
-  )
+  );
 }

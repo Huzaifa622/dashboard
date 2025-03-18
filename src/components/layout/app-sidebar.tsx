@@ -16,32 +16,32 @@ import { Link } from "react-router"
 const items = [
   {
     title: "Dashboard",
-    url: "dashboard",
+    url: "/super-admin/dashboard",
     icon: Home,
   },
   {
     title: "Tasks",
-    url: "tasks",
+    url: "/super-admin/tasks",
     icon: Logs ,
   },
   {
     title: "Activities",
-    url: "activites",
+    url: "/super-admin/activites",
     icon: Calendar,
   },
   {
     title: "Payments",
-    url: "Payments",
+    url: "/super-admin/Payments",
     icon: Banknote ,
   },
   {
     title: "Analytics",
-    url: "Analytics",
+    url: "/super-admin/Analytics",
     icon: ChartColumnBig ,
   },
   {
     title: "Settings",
-    url: "Settings",
+    url: "/super-admin/Settings",
     icon: Settings,
   },
 ]
@@ -57,7 +57,7 @@ export function AppSidebar() {
               {items.map((item) => (
                 <SidebarMenuItem key={item.title}>
                   <SidebarMenuButton asChild className=" py-5 transition-all font-bold ease-linear ">
-                    <Link to={item.url.toLocaleLowerCase()}>
+                    <Link to={item.url}>
                       <item.icon size={25} />
                       <span>{item.title}</span>
                     </Link>

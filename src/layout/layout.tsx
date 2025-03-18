@@ -12,7 +12,7 @@ export default function Layout() {
       <SidebarProvider className="">
         <AppSidebar />
         <SidebarTrigger />
-        <main className="grow mt-16 px-2 bg-sidebar text-foreground">
+        <main className="grow mt-16 px-2 bg-sidebar overflow-x-hidden text-foreground">
           <Outlet />
         </main>
       </SidebarProvider>

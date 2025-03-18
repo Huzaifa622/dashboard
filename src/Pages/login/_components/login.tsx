@@ -22,7 +22,7 @@ function Login() {
   } = useForm<SchemaType>({ resolver: zodResolver(loginSchema) });
 
   const onSubmit = async () => {
-    window.location.href = "/";
+    window.location.href = "/super-admin";
   };
   return (
     <div className="bg-sidebar">
@@ -50,7 +50,7 @@ function Login() {
                   placeholder="john@example.com"
                   className="peer h-10 w-full border-b-2 border-sidebar-border text-sidebar-foreground bg-transparent placeholder-transparent focus:outline-none focus:border-sidebar-accent"
                   {...register("email", { required: true })}
-                  id="email"
+             
                   name="email"
                   type="email"
                 />

@@ -8,13 +8,13 @@ import Tasks from "./Pages/tasks/tasks"
 
 
 export const routes = [
-    {path: '/', component: Dashboard},
-    {path: '/dashboard', component: Dashboard},
-    {path: '/firm-dashboard', component: Dashboard},
-    {path: '/firm-feed', component: Dashboard},
-    {path: '/tasks', component: Tasks  },
-    {path: '/activites', component: Activites  },
-    {path: '/payments', component: Payments  },
-    {path: '/analytics', component: Analytics  },
-    {path: '/settings', component: Settings  },
+    {path: '/super-admin/', component: Dashboard},
+    {path: '/super-admin/dashboard', component: Dashboard},
+    {path: '/super-admin/firm-dashboard', component: Dashboard},
+    {path: '/super-admin/firm-feed', component: Dashboard},
+    {path: '/super-admin/tasks', component: Tasks  },
+    {path: '/super-admin/activites', component: Activites  },
+    {path: '/super-admin/payments', component: Payments  },
+    {path: '/super-admin/analytics', component: Analytics  },
+    {path: '/super-admin/settings', component: Settings  },
 ]

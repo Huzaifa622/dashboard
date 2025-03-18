@@ -47,39 +47,37 @@ const teams= [
   },
 ]
 const items = [
-  
   {
     title: "Dashboard",
-    url: "dashboard",
+    url: "/super-admin/dashboard",
     icon: Home,
   },
   {
     title: "Tasks",
-    url: "tasks",
+    url: "/super-admin/tasks",
     icon: Logs ,
   },
   {
     title: "Activities",
-    url: "activites",
+    url: "/super-admin/activites",
     icon: Calendar,
   },
   {
     title: "Payments",
-    url: "Payments",
+    url: "/super-admin/Payments",
     icon: Banknote ,
   },
   {
     title: "Analytics",
-    url: "Analytics",
+    url: "/super-admin/Analytics",
     icon: ChartColumnBig ,
   },
   {
     title: "Settings",
-    url: "Settings",
+    url: "/super-admin/Settings",
     icon: Settings,
   },
 ]
-
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
   return (
     <Sidebar collapsible="icon" {...props} className="border-r-sidebar-border" >
