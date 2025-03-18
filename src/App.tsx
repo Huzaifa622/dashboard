@@ -3,6 +3,7 @@ import "./App.css";
 import Layout from "./layout/layout";
 import { routes } from "./routes";
 import Login from "./Pages/login";
+import NotFound from "./components/not-found";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         ))}
       </Route>
       <Route />
+      <Route path="*" element={<NotFound/>} />
       {/* <Layout>
         <div>heeloo</div>
       </Layout> */}

@@ -1,5 +1,4 @@
 import { Button } from "@/components/ui/button";
-// import { Link } from "react-router";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
@@ -12,6 +11,7 @@ const loginSchema = z.object({
     .min(8, { message: "Password must be atleast 8 characters " })
     .max(16),
 });
+
 type SchemaType = z.infer<typeof loginSchema>;
 
 function Login() {
